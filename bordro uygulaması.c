@@ -3,18 +3,18 @@
 #include <string.h> 
 #include <ctype.h> 
 #define uzunluk 11 
-int kimlikkontrol(char tc[]) { // kimlik için alt program oluşturuyorum
- if (strlen(tc) != uzunluk) { // Uzunluk kontrolü için strlen kullanıyorum
+int kimlikkontrol(char tc[]) { // kimlik iÃ§in alt program oluÅŸturuyorum
+ if (strlen(tc) != uzunluk) { // Uzunluk kontrolÃ¼ iÃ§in strlen kullanÄ±yorum
  return 0;   
 }
 for (int i = 0; i < uzunluk; i++) //diziyi for ile kontrol edip rakam girildi mi diye kontrol ediyorum
 { if (!isdigit(tc[i])) {
-return 0; //0 olursa geçersiz yani rakam dışı bir şey algılıyor
+return 0; //0 olursa geÃ§ersiz yani rakam dÄ±ÅŸÄ± bir ÅŸey algÄ±lÄ±yor
 } 
-return 1; // rakam olduğu anlaşılıyor 
+return 1; // rakam olduÄŸu anlaÅŸÄ±lÄ±yor 
 }
 }		 
-int karakterkontrolleri(char str[]){ // karakter kontorlü için yine aynısını alt program  yapıyorum 
+int karakterkontrolleri(char str[]){ // karakter kontorlÃ¼ iÃ§in yine aynÄ±sÄ±nÄ± alt program  yapÄ±yorum 
 for (int i = 0; i < strlen(str); i++){
 if (!isalpha(str[i])) 
 {
@@ -23,8 +23,8 @@ return 0;
 } 
 return 1; 
 }  
-void karakterkontrolu( const char *mesaj, char dizi[], int boyut) { // hatalı  olduğunda tekrar girmesi için sonsuz döngü  ve yine alt program yağıyorum
-while (1) {                                                  // boyut ,dizi,mesaj çıktılar girdiler ve bouytlarının kontrol etmek için yapılıyor
+void karakterkontrolu( const char *mesaj, char dizi[], int boyut) { // hatalÄ±  olduÄŸunda tekrar girmesi iÃ§in sonsuz dÃ¶ngÃ¼  ve yine alt program yaÄŸÄ±yorum
+while (1) {                                                  // boyut ,dizi,mesaj Ã§Ä±ktÄ±lar girdiler ve bouytlarÄ±nÄ±n kontrol etmek iÃ§in yapÄ±lÄ±yor
 printf("%s",mesaj);
 scanf("%s", dizi); 
 if (karakterkontrolleri(dizi)) {
@@ -33,7 +33,7 @@ printf("Hata: Sadece harfler girebilirsiniz.\n");
 }
 }
 }
-int netmas(){// net maaş için burada kesintiler hesaplanıyor ve yine alt program 
+int netmas(){// net maaÅŸ iÃ§in burada kesintiler hesaplanÄ±yor ve yine alt program 
 float sskprim,issizliksgp,glrvrgmtrh,glrvrgmktr,kesintiler,netmaas,dmgvrgmktr,brutmaas;
 printf("lutfen brut maasinizi giriniz  :");
 scanf("%f",&brutmaas);
@@ -47,12 +47,12 @@ netmaas=brutmaas-kesintiler;
 printf("net maasiniz :%.3f",netmaas,"TL");	
 return netmaas;
 }
-FILE *fpr,*fpw; // dosya oluşturup yazıyoruz
+FILE *fpr,*fpw; // dosya oluÅŸturup yazÄ±yoruz
 int main(){	
 char tc[12], isim[50], soyisim[50], departman[50];
-while (1) {// buradaki komut hata olduğunda tekrar girilmesini sağlıyor.
+while (1) {// buradaki komut hata olduÄŸunda tekrar girilmesini saÄŸlÄ±yor.
 printf("Lutfen 11 haneli TC kimlik numaranizi girin: ");
-scanf("%11s", tc);// 11 hane sonrasına izin vermez
+scanf("%11s", tc);// 11 hane sonrasÄ±na izin vermez
 if (kimlikkontrol(tc)) {
 printf("\n");
 break;
@@ -60,10 +60,10 @@ break;
 printf("Hata: TC kimlik numarasi 11 haneli olmali ve sadece rakamlardan olusmalidir.\n");
 }
 } 
-// while dan başlayıp bu noktaya kadar tc kontrolü yapılıp alt program ile entegre ediyorum
-karakterkontrolu("İsim: ", isim, sizeof(isim)); 
+// while dan baÅŸlayÄ±p bu noktaya kadar tc kontrolÃ¼ yapÄ±lÄ±p alt program ile entegre ediyorum
+karakterkontrolu("Ä°sim: ", isim, sizeof(isim)); 
 karakterkontrolu("Soyisim: ", soyisim, sizeof(soyisim)); 
-karakterkontrolu("Departman: ", departman, sizeof(departman)); // karakterkontrolü ile başlayan yer den buraya kadar ise karakteter kontrolü alt programı yapılıyor
+karakterkontrolu("Departman: ", departman, sizeof(departman)); // karakterkontrolÃ¼ ile baÅŸlayan yer den buraya kadar ise karakteter kontrolÃ¼ alt programÄ± yapÄ±lÄ±yor
 float brutmaas,netmaas;
 netmas();
 fpw=fopen("bordrokayit.txt","w");
