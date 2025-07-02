@@ -9,6 +9,14 @@ Bu proje, C dilinde yazılmış basit bir bordro hesaplama uygulamasıdır. Kull
 - Brüt maaşa göre net maaş hesaplama
 - Fonksiyonel yapı
 - Dosya çıktısı (bordrokayit.txt)
+- ## 📘 Öğrenilen Konular
+
+- `struct` (yapı) kullanımı  
+- Karakter ve sayı kontrolü  
+- Koşullu ifadeler (`if`, `else`)  
+- Fonksiyonel yapı  
+- Dosya işlemleri (`fprintf`, `fopen`, `fclose`)  
+
 
 ## 🛠️ Kullanılan Teknolojiler
 
